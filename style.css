@@ -1,0 +1,133 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c; /* Dark background */
+    color: #f8f8f2; /* Light text for contrast */
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #282a36;
+    color: white;
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: #44475a; /* Interactive hover effect */
+    border-radius: 5px;
+}
+
+.center-image {
+    display: block;
+    margin: 1em auto;
+    max-width: 90%; /* Responsive max width */
+    height: auto;
+}
+
+section {
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #282a36; /* Section background */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Shadow for depth */
+    color: #f8f8f2;
+    margin-bottom: 20px; /* Spacing between sections */
+}
+
+footer {
+    background-color: #282a36;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.2); /* Shadow at the top of the footer */
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+#chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6a0dad;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 0 20px #9d00ff;
+    animation: spookyPulse 2s infinite;
+    z-index: 1000; /* Ensures the button is above other elements */
+}
+
+@keyframes spookyPulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px #9d00ff; }
+    50% { transform: scale(1.1); box-shadow: 0 0 20px #9d00ff; }
+    100% { transform: scale(1); box-shadow: 0 0 10px #9d00ff; }
+}
+
+/* Additional styling for dummy content */
+h1, h2, h3, h4, h5, h6 {
+    color: #50fa7b; /* Spooky green color for headings */
+}
+
+p, li {
+    line-height: 1.6; /* Improved readability for text */
+}
+
+/* Style for dummy content buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #50fa7b; /* Spooky green color */
+    color: #282a36;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #6272a4; /* Different color on hover */
+    color: #f8f8f2;
+}
+
+/* Responsive design breakpoints */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .center-image {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+    
+    section {
+        margin: 10px;
+    }
+}
